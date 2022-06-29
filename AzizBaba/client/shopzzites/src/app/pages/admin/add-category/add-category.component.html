@@ -1,0 +1,60 @@
+<!--<h1 style="text-align: center; margin-top: 20px;" >Add New Category</h1>
+
+<form class="container" style="width: 30%; margin-top: 40px;" (ngSubmit)="formSubmit()">
+    <div class="form-group">
+      <label for="exampleDropdownFormEmail2">Title</label>
+      <input 
+      required
+      [(ngModel)]="category.categoryTitle" 
+             name="title"
+      type="text" class="form-control"  placeholder="txt">
+    </div>
+    <br>
+    <div class="form-group">
+      <label for="exampleDropdownFormPassword2">Description</label>
+      <input 
+      required
+      [(ngModel)]="category.categoryDescription" 
+             name="description"
+      type="text" class="form-control"  placeholder="txt">
+    </div>
+    <br>
+    <button type="submit" class="btn btn-danger">Add</button>
+   <a href="admin" style="margin-left: 40px;">Back</a>
+  </form>-->
+
+
+  <mat-card style="text-align: center;">
+    <h1>Add New Category</h1>
+    <mat-card-content>
+      <form (ngSubmit)="formSubmit()">
+        <mat-form-field class="w100" appearance="outline">
+          <mat-label>Title</mat-label>
+          <input 
+      required
+      [(ngModel)]="category.categoryTitle" 
+             name="title"
+      type="text" class="form-control" matInput placeholder="txt">
+        </mat-form-field>
+        <br>
+
+        <mat-form-field class="w100" appearance="outline">
+          <mat-label>Description</mat-label>
+          <input 
+      required
+      [(ngModel)]="category.categoryDescription" 
+             name="description"
+      type="text" class="form-control" matInput placeholder="txt">
+        </mat-form-field>
+
+        <br>
+
+        <button type="submit" class="btn btn-danger">Add</button>
+   
+      </form>
+      <br>
+      
+    </mat-card-content>
+  </mat-card>
+  <a href="admin" style="text-align: right;">Back</a>
+  

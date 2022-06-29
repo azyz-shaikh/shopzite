@@ -1,0 +1,57 @@
+
+
+    <h2>User list</h2>
+<table class="table table-striped">
+    <thead>
+        <tr>
+        <th>username</th>
+        <th>email</th>
+        <th>userPassword</th>
+        
+    </tr>
+
+
+    </thead>
+    <tbody>
+        <tr *ngFor="let user of user">
+        <td>{{user.username}}</td>
+        <td>{{user.email}}</td>
+        <td>{{user.password}}</td>
+
+        
+    
+        <td>
+           
+             <button (click)="deleteUser(user.id) " class="btn btn-danger" style="margin-left: 10px;">Delete</button>
+
+           
+
+        </td>
+        </tr>
+
+        
+
+        <br>
+        <br>
+
+
+  
+        <a href="admin">back</a>
+
+
+    
+
+
+
+        
+
+    </tbody>
+
+    <br>
+    <br>
+
+    <router-outlet> </router-outlet>
+ 
+</table>
+
+

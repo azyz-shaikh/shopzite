@@ -1,0 +1,27 @@
+<div class="bootstrap-wrapper">
+    <div class="container-fluid">
+        <div class="row" *ngIf="products">
+        <div class="col-md-4" *ngFor="let p of products"> 
+            <br><br>
+            <mat-card class="example-card">
+                <mat-card-header>
+                  <div mat-card-avatar class="example-header-image"></div>
+                  <mat-card-title>{{p.pName}}</mat-card-title>
+                  <mat-card-subtitle>{{p.pPrice}}/-Rs</mat-card-subtitle>
+                </mat-card-header>
+                <img mat-card-image src="{{p.pPhoto}}" style="width: 170px; margin-left: 20px; height: 170px;">
+                <mat-card-content>
+                  <h3>
+                   {{p.pDesc}}
+                  </h3>
+                </mat-card-content>
+                <mat-card-actions>
+                  <button mat-raised-button color="warn">Add-To-Cart</button>
+                  <button mat-raised-button color="warn" style="margin-left: 50px;">Buy</button>
+                </mat-card-actions>
+              </mat-card>
+
+        </div>
+    </div>
+    </div>
+</div>

@@ -1,0 +1,84 @@
+
+
+<div class="container" style="margin-top: 20px; text-align: center;" >
+
+
+    
+    <h1 style=" text-align: center;">Add New Product</h1>
+    <br>
+    <form (ngSubmit)="submit()">
+<mat-form-field appearance="fill" class="input"> 
+    <mat-label >product name</mat-label>
+    <input matInput
+    required
+    [(ngModel)]="categoryData.pName" 
+           name="pName"
+    >
+    
+
+  </mat-form-field>
+  <br>
+  <mat-form-field appearance="fill" class="input"> 
+    <mat-label >product price</mat-label>
+    <input
+    required
+    [(ngModel)]="categoryData.pPrice" 
+           name="pPrice"
+    matInput>
+  </mat-form-field>
+  <br>
+  <mat-form-field appearance="fill" class="input">
+    <mat-label>product describtion</mat-label>
+    <textarea 
+
+    required
+    [(ngModel)]="categoryData.pDesc" 
+           name="pDesc"
+    matInput>
+    
+    matInput></textarea>
+  </mat-form-field>
+  <br>
+  <mat-form-field appearance="fill" class="input"> 
+    <mat-label >product Photo</mat-label>
+    <input matInput
+    required
+    [(ngModel)]="categoryData.pPhoto" 
+           name="pPhoto"
+    >
+    
+  </mat-form-field>
+  
+  <br>
+
+  <mat-form-field appearance="fill" class="input">
+    <mat-label> Category-List</mat-label>
+    <mat-select name="category" 
+    
+    required
+    [(ngModel)]="categoryData.category.categoryId" 
+           
+    >
+      <mat-option *ngFor="let c of categories" [value]="c.categoryId">
+          {{c.categoryTitle}}
+
+          
+    </mat-option>
+
+   
+    
+    </mat-select>
+
+   
+
+  </mat-form-field>
+
+  <br>
+
+  <button mat-stroked-button style color="accent" type="submit"  >Add</button>
+ 
+</form>
+<br>
+
+</div>
+<a style="text-align: right;" href="admin">back</a>
